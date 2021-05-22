@@ -40,5 +40,16 @@ function randomContent() {
   document.body.style.backgroundImage = "url(" + folder + image +")";
 }
 
+let refreshButton = document.getElementById('refreshButton');
+
+/**
+ * Refresh the page on click button radar.
+ */
+ function refreshPage() {
+  console.log('refresh');
+  window.location.reload();
+}
+
 preLoadImages(imageList);
 randomContent();
+refreshButton.addEventListener('click', refreshPage);
