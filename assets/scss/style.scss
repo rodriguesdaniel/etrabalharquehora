@@ -23,9 +23,10 @@ h1 {
 }
 
 .wrapper {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
 }
 
@@ -34,11 +35,45 @@ h1 {
     background-color: $black-color;
     color: $white-color;
     display: inline-block;
-    padding: 10px 20px;
-    font-weight: 900;
-    text-transform: uppercase;
-    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-    box-shadow: 5px 5px 15px 5px #000000;
     text-align: center;
+  }
+}
+
+.message {
+  padding: 10px 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  -webkit-box-shadow: 5px 5px 15px 5px $black-color; 
+  box-shadow: 5px 5px 15px 5px $black-color;
+}
+
+.btn-refresh {
+  background: url('../images/radar.png') center center no-repeat;
+  background-size: cover;
+  border: 1px solid $black-color;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 800;
+  height: 70px;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 10px;
+  width: 70px;
+  
+  &:hover {
+    background-color: $white-color;
+  }
+
+  &:after {
+    bottom: -50px;
+    color: $white-color;
+    content: "click me";
+    left: 0;
+    position: absolute;
+    width: 100%;
   }
 }
